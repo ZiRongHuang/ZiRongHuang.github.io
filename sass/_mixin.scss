@@ -1,0 +1,61 @@
+// 名稱: 解決media query 裡面不能用 sprite 圖
+// 參考: https://gist.github.com/brubrant/3166895
+// 用法: @include get-sprite($map, 圖片名稱); 配合_variable $map變數
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+
+  	//http://compass-style.org/reference/compass/helpers/sprites/#sprite-file
+ 	  $sprite-image: sprite-file($map, $sprite);
+  
+  	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-url
+  	$sprite-map: sprite-url($map);
+  
+  	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-position
+  	$sprite-position: sprite-position($map, $sprite);
+  
+  	// Returns background
+  	background: $sprite-map $sprite-position $repeat;
+  
+  	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+  	// Checks to see if the user wants height returned
+  	@if $height == true {
+    	// Gets the height of the sprite-image
+    	$sprite-height: image-height($sprite-image);
+    	// Returns the height
+    	height: $sprite-height; }
+    
+  	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+  	// Checks to see if the user wants height returned
+  	@if $width == true {
+    	// Gets the width of the sprite-image
+    	$sprite-width: image-width($sprite-image);
+    	// Returns the width
+    	width: $sprite-width; }
+}
+
+
+// 名稱: 剪角線性漸層 mixin
+// 參考: 解決網頁設計問題的有效秘訣 P.100
+// 用法: @include beveled-corners(#58a, 10px, 10px, 10px, 20px);
+@mixin beveled-corners($bg, $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
+  background: $bg;
+  background: linear-gradient(135deg, transparent $tl, $bg 0) top left,
+              linear-gradient(225deg, transparent $tr, $bg 0) top right,
+              linear-gradient(-45deg, transparent $br, $bg 0) bottom right,
+              linear-gradient(45deg, transparent $bl, $bg, $bg 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+// 名稱: 剪角圓角漸層 mixin
+// 參考: 解決網頁設計問題的有效秘訣 P.101
+// 用法: @include scoop-corners(#58a, 10px, 10px, 10px, 10px);
+@mixin scoop-corners($bg, $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
+  background: $bg;
+  background: radial-gradient(circle at top left, transparent $tl, $bg 0) top left,
+              radial-gradient(circle at top right, transparent $tr, $bg 0) top right,
+              radial-gradient(circle at bottom right, transparent $br, $bg 0) bottom right,
+              radial-gradient(circle at bottom left, transparent $bl, $bg 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
