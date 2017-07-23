@@ -1,34 +1,34 @@
 %indent {
-    display: block;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 %decoration {
-    display: block;
-    text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 
 %block {
-    @include container();
-    max-width: $mainWidth;
+  @include container();
+  max-width: $mainWidth;
 }
 
 %vertical-outer {
-    &:before {
-        display: inline-block;
-        vertical-align: middle;
-        width: 0px;
-        height: 100%;
-        content: "";
-        visibility: hidden;
-    }
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0px;
+    height: 100%;
+    content: "";
+    visibility: hidden;
+  }
 }
 
 %vertical-inner {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 %inline-outer {
@@ -40,9 +40,9 @@
 %inline-inner {
   letter-spacing: normal; //可能需要微調
   // word-spacing: normal;
-  display:inline-block;
+  display: inline-block;
   *display: inline;
-  zoom:1;
+  zoom: 1;
 }
 
 %text-overflow {

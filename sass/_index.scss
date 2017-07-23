@@ -1,749 +1,749 @@
 //===== PC版 =====
 .profile {
-    background-color: $menubgColor;
-    position: relative;
-    float: left;
-    width: 100%;
-    .profile_extend {
-        @extend %block;
-        padding: 5px 0;
-        .ZiRo {
-            @include span(12 of 24);
-            padding-top: 110px;
-            @include box-sizing(border-box);
-            .name {
-                padding-bottom: 10px;
-                .CH {
-                    @include adjust-font-size-to(nth($font-list, 6), 3); //36px
-                    font-weight: 500;
-                    padding: 5px 0;
-                }
-                .EN {
-                    @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                    padding: 5px 0;
-                }
-            }
-            .info {
-                p {
-                    @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                    padding: 5px 0;
-                    span {
-                        @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                        padding: 5px 0;
-                        &:before {
-                            content: '/';
-                            display: inline-block;
-                            padding: 0 5px;
-                        }
-                    }
-                }
-            }
+  background-color: $menubgColor;
+  position: relative;
+  float: left;
+  width: 100%;
+  .profile_extend {
+    @extend %block;
+    padding: 5px 0;
+    .ZiRo {
+      @include span(12 of 24);
+      padding-top: 110px;
+      @include box-sizing(border-box);
+      .name {
+        padding-bottom: 10px;
+        .CH {
+          @include adjust-font-size-to(nth($font-list, 6), 3); //36px
+          font-weight: 500;
+          padding: 5px 0;
         }
-        .RoImg {
-            @include span(12 of 24);
-            img {
-                max-width: 70%;
-                margin: 0 auto;
-            }
+        .EN {
+          @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+          padding: 5px 0;
         }
+      }
+      .info {
+        p {
+          @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+          padding: 5px 0;
+          span {
+            @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+            padding: 5px 0;
+            &:before {
+              content: '/';
+              display: inline-block;
+              padding: 0 5px;
+            }
+          }
+        }
+      }
     }
+    .RoImg {
+      @include span(12 of 24);
+      img {
+        max-width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .skills {
-    @extend %block;
-    padding-top: 30px;
-    clear: both;
-    .sklName {
-        @include span(12 of 24);
-        h3 {
-            @include adjust-font-size-to(nth($font-list, 5), 3); //28px
-            padding-left: 5px;
-            border-left: 3px solid $menuColor;
-            margin-bottom: 15px;
-        }
-        .sklList {
-            p {
-                display: inline-block;
-                @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                background-color: $grayColor;
-                border: solid 1px $grayColor;
-                border-radius: 5px;
-                padding: 5px;
-                margin: 5px 0;
-            }
-        }
+  @extend %block;
+  padding-top: 30px;
+  clear: both;
+  .sklName {
+    @include span(12 of 24);
+    h3 {
+      @include adjust-font-size-to(nth($font-list, 5), 3); //28px
+      padding-left: 5px;
+      border-left: 3px solid $menuColor;
+      margin-bottom: 15px;
     }
-    .sklPic {
-        @include span(12 of 24);
-        h3 {
-            @include adjust-font-size-to(nth($font-list, 5), 3); //28px
-            padding-left: 5px;
-            border-left: 3px solid $menuColor;
-            margin-bottom: 15px;
-        }
-        .picList {
-            li {
-                p {
-                    @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                    background-color: $grayColor;
-                    padding: 5px;
-                    margin-bottom: 5px;
-                    span {
-                        @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                        &:before {
-                            content: '-';
-                            display: inline-block;
-                            padding: 0 5px;
-                        }
-                    }
-                }
-            }
-        }
+    .sklList {
+      p {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+        background-color: $grayColor;
+        border: solid 1px $grayColor;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px 0;
+      }
     }
+  }
+  .sklPic {
+    @include span(12 of 24);
+    h3 {
+      @include adjust-font-size-to(nth($font-list, 5), 3); //28px
+      padding-left: 5px;
+      border-left: 3px solid $menuColor;
+      margin-bottom: 15px;
+    }
+    .picList {
+      li {
+        p {
+          @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+          background-color: $grayColor;
+          padding: 5px;
+          margin-bottom: 5px;
+          span {
+            @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+            &:before {
+              content: '-';
+              display: inline-block;
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .schedules {
-    padding: 30px 0 30px 0;
-    position: relative;
-    .school {
-        @extend %block;
-        margin-bottom: 30px;
-        .chedules_school {
-            position: relative;
-            padding-top: 1px;
-            h3 {
-                display: inline-block;
-                @include adjust-font-size-to(nth($font-list, 6), 5); //36px
-                font-weight: bold;
-                color: $menuColor;
-                letter-spacing: 3px;
-                position: absolute;
-                top: -25px;
-                left: 150px;
-            }
-            .justImg_PC {
-                float: right;
-                top: 0;
-                right: 0;
-                position: relative;
-                z-index: -1;
-                width: 512px;
-                &:before {
-                    content: '';
-                    display: block;
-                    background-color: $picbgColor;
-                    padding-top: 75%; //384 / 512
-                }
-                img {
-                    position: absolute;
-                    top: 0;
-                    float: left;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .justCard {
-                margin-top: 60px;
-                width: 480px;
-                padding: 70px 50px;
-                @include box-sizing(border-box);
-                background-color: $menubgColor;
-                z-index: 1;
-                .justName {
-                    h4 {
-                        @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                        span {
-                            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                            &:before {
-                                content: '-';
-                                display: inline-block;
-                                padding: 0 5px;
-                            }
-                        }
-                    }
-                    p {
-                        @include adjust-font-size-to(nth($font-list, 2), 2); //14px
-                        color: $picbgColor;
-                    }
-                }
-                .justImg {
-                    img {
-                        display: none;
-                    }
-                }
-                .justGood {
-                    padding: 10px 0;
-                    p {
-                        @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                        span {
-                            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                            &:before {
-                                content: '/';
-                                display: inline-block;
-                                padding: 0 5px;
-                            }
-                        }
-                    }
-                }
-                .justJob {
-                    p {
-                        padding-bottom: 5px;
-                        @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                        span {
-                            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                            &:before {
-                                content: '/';
-                                display: inline-block;
-                                padding: 0 5px;
-                            }
-                        }
-                    }
-                    .jobJ {
-                        .jobList {
-                            li {
-                                @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                                &:before {
-                                    content: '-';
-                                    display: inline-block;
-                                    padding: 0 5px;
-                                } // margin-left: 29px;
-                                // text-indent: -29px;
-                                // span {
-                                //   min-width: 29px;
-                                //   text-align: right;
-                                // }
-                            }
-                        }
-                    }
-                }
-            }
+  padding: 30px 0 30px 0;
+  position: relative;
+  .school {
+    @extend %block;
+    margin-bottom: 30px;
+    .chedules_school {
+      position: relative;
+      padding-top: 1px;
+      h3 {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 6), 5); //36px
+        font-weight: bold;
+        color: $menuColor;
+        letter-spacing: 3px;
+        position: absolute;
+        top: -25px;
+        left: 150px;
+      }
+      .justImg_PC {
+        float: right;
+        top: 0;
+        right: 0;
+        position: relative;
+        z-index: -1;
+        width: 512px;
+        &:before {
+          content: '';
+          display: block;
+          background-color: $picbgColor;
+          padding-top: 75%; //384 / 512
         }
-    }
-    .experience {
-        @extend %block;
-        margin-bottom: 30px;
-        .chedules_experience {
-            position: relative;
-            padding-top: 1px;
-            h3 {
-                display: inline-block;
-                @include adjust-font-size-to(nth($font-list, 6), 5); //36px
-                font-weight: bold;
-                color: $menuColor;
-                letter-spacing: 3px;
-                position: absolute;
-                top: -25px;
-                left: 650px;
-            }
-            .compalCard {
-                margin-top: 60px;
-                padding: 70px 50px 115px;
-                @include box-sizing(border-box);
-                background-color: $menubgColor;
-                z-index: 1;
-                float: right;
-                top: 0;
-                right: 0;
-                width: 480px;
-                .compalName {
-                    padding-bottom: 5px;
-                    h4 {
-                        @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                        span {
-                            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
-                            &:before {
-                                content: '-';
-                                display: inline-block;
-                                padding: 0 5px;
-                            }
-                        }
-                    }
-                    p {
-                        @include adjust-font-size-to(nth($font-list, 2), 2); //14px
-                        color: $picbgColor;
-                    }
-                }
-                .compalImg {
-                    img {
-                        display: none;
-                    }
-                }
-                .jobList {
-                    li {
-                        @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                        margin-top: 5px;
-                        &:before {
-                            content: '-';
-                            display: inline-block;
-                            padding: 0 5px;
-                        }
-                    }
-                }
-            }
-            .compalImg_PC {
-                position: relative;
-                z-index: -1;
-                width: 512px;
-                &:before {
-                    content: '';
-                    display: block;
-                    background-color: $picbgColor;
-                    padding-top: 75%; //384 / 512
-                }
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: auto;
-                }
-            }
+        img {
+          position: absolute;
+          top: 0;
+          float: left;
+          width: 100%;
+          height: auto;
         }
-    }
-    .F2EHappy {
-        @extend %block;
-        .chedules_F2EHappy {
-            position: relative;
-            padding-top: 1px;
-            h3 {
+      }
+      .justCard {
+        margin-top: 60px;
+        width: 480px;
+        padding: 70px 50px;
+        @include box-sizing(border-box);
+        background-color: $menubgColor;
+        z-index: 1;
+        .justName {
+          h4 {
+            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+            span {
+              @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+              &:before {
+                content: '-';
                 display: inline-block;
-                @include adjust-font-size-to(nth($font-list, 6), 5); //36px
-                font-weight: bold;
-                color: $menuColor;
-                letter-spacing: 3px;
-                position: absolute;
-                top: -25px;
-                left: 150px;
+                padding: 0 5px;
+              }
             }
-            .F2EImg_PC {
-                float: right;
-                top: 0;
-                right: 0;
-                position: relative;
-                z-index: -1;
-                width: 512px;
-                &:before {
-                    content: '';
-                    display: block;
-                    background-color: $picbgColor;
-                    padding-top: 62.5%; //320 / 512
-                }
-                img {
-                    position: absolute;
-                    top: 0;
-                    float: left;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .F2ECard {
-                margin-top: 60px;
-                width: 480px;
-                padding: 70px 50px 50px;
-                @include box-sizing(border-box);
-                background-color: $menubgColor;
-                z-index: 1;
-                .F2EImg {
-                    img {
-                        display: none;
-                    }
-                }
-                p {
-                    @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                    text-align: justify;
-                    letter-spacing: 1px;
-                }
-            }
+          }
+          p {
+            @include adjust-font-size-to(nth($font-list, 2), 2); //14px
+            color: $picbgColor;
+          }
         }
+        .justImg {
+          img {
+            display: none;
+          }
+        }
+        .justGood {
+          padding: 10px 0;
+          p {
+            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+            span {
+              @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+              &:before {
+                content: '/';
+                display: inline-block;
+                padding: 0 5px;
+              }
+            }
+          }
+        }
+        .justJob {
+          p {
+            padding-bottom: 5px;
+            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+            span {
+              @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+              &:before {
+                content: '/';
+                display: inline-block;
+                padding: 0 5px;
+              }
+            }
+          }
+          .jobJ {
+            .jobList {
+              li {
+                @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+                &:before {
+                  content: '-';
+                  display: inline-block;
+                  padding: 0 5px;
+                } // margin-left: 29px;
+                // text-indent: -29px;
+                // span {
+                //   min-width: 29px;
+                //   text-align: right;
+                // }
+              }
+            }
+          }
+        }
+      }
     }
+  }
+  .experience {
+    @extend %block;
+    margin-bottom: 30px;
+    .chedules_experience {
+      position: relative;
+      padding-top: 1px;
+      h3 {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 6), 5); //36px
+        font-weight: bold;
+        color: $menuColor;
+        letter-spacing: 3px;
+        position: absolute;
+        top: -25px;
+        left: 650px;
+      }
+      .compalCard {
+        margin-top: 60px;
+        padding: 70px 50px 115px;
+        @include box-sizing(border-box);
+        background-color: $menubgColor;
+        z-index: 1;
+        float: right;
+        top: 0;
+        right: 0;
+        width: 480px;
+        .compalName {
+          padding-bottom: 5px;
+          h4 {
+            @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+            span {
+              @include adjust-font-size-to(nth($font-list, 4), 3); //24px
+              &:before {
+                content: '-';
+                display: inline-block;
+                padding: 0 5px;
+              }
+            }
+          }
+          p {
+            @include adjust-font-size-to(nth($font-list, 2), 2); //14px
+            color: $picbgColor;
+          }
+        }
+        .compalImg {
+          img {
+            display: none;
+          }
+        }
+        .jobList {
+          li {
+            @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+            margin-top: 5px;
+            &:before {
+              content: '-';
+              display: inline-block;
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+      .compalImg_PC {
+        position: relative;
+        z-index: -1;
+        width: 512px;
+        &:before {
+          content: '';
+          display: block;
+          background-color: $picbgColor;
+          padding-top: 75%; //384 / 512
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .F2EHappy {
+    @extend %block;
+    .chedules_F2EHappy {
+      position: relative;
+      padding-top: 1px;
+      h3 {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 6), 5); //36px
+        font-weight: bold;
+        color: $menuColor;
+        letter-spacing: 3px;
+        position: absolute;
+        top: -25px;
+        left: 150px;
+      }
+      .F2EImg_PC {
+        float: right;
+        top: 0;
+        right: 0;
+        position: relative;
+        z-index: -1;
+        width: 512px;
+        &:before {
+          content: '';
+          display: block;
+          background-color: $picbgColor;
+          padding-top: 62.5%; //320 / 512
+        }
+        img {
+          position: absolute;
+          top: 0;
+          float: left;
+          width: 100%;
+          height: auto;
+        }
+      }
+      .F2ECard {
+        margin-top: 60px;
+        width: 480px;
+        padding: 70px 50px 50px;
+        @include box-sizing(border-box);
+        background-color: $menubgColor;
+        z-index: 1;
+        .F2EImg {
+          img {
+            display: none;
+          }
+        }
+        p {
+          @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+          text-align: justify;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
 }
 
 .kodoba {
-    background-color: $menubgColor;
-    .kodoba_extend {
-        @extend %block;
-        position: relative;
-        h3 {
-            @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-            background-color: $menuColor;
-            display: inline-block;
-            color: $lightColor;
-            padding: 5px 50px 5px 10px;
-            position: absolute;
-            top: -15px;
-            left: 0;
-        }
-        .kodobaCard {
-            padding: 30px 45px;
-            p {
-                @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
-                letter-spacing: 1px;
-            }
-        }
+  background-color: $menubgColor;
+  .kodoba_extend {
+    @extend %block;
+    position: relative;
+    h3 {
+      @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+      background-color: $menuColor;
+      display: inline-block;
+      color: $lightColor;
+      padding: 5px 50px 5px 10px;
+      position: absolute;
+      top: -15px;
+      left: 0;
     }
+    .kodobaCard {
+      padding: 30px 45px;
+      p {
+        @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+        letter-spacing: 1px;
+      }
+    }
+  }
 }
 
 //===== RWD變版 =====
 @include breakpoint(max-width 980px) {
-    .profile {
-        float: left;
+  .profile {
+    float: left;
+    width: 100%;
+    .profile_extend {
+      flex-wrap: wrap;
+      @include span(24 of 24);
+      display: flex;
+      .ZiRo {
+        margin: 10px 0;
+        padding: 5px 0;
         width: 100%;
-        .profile_extend {
-            flex-wrap: wrap;
-            @include span(24 of 24);
-            display: flex;
-            .ZiRo {
-                margin: 10px 0;
-                padding: 5px 0;
-                width: 100%;
-                order: 2;
-                border: solid 3px $menuColor;
-                .name {
-                    text-align: center;
-                    padding-bottom: 0px;
-                    .CH {
-                        @include adjust-font-size-to(nth($font-list, 4), 2); //24px
-                    }
-                    .EN {
-                        @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                        padding: 0;
-                    }
-                }
-                .info {
-                    text-align: center;
-                    p {
-                        padding: 0;
-                    }
-                }
-            }
-            .RoImg {
-                width: 100%;
-                order: 1;
-                img {
-                    max-width: 40%;
-                }
-            }
+        order: 2;
+        border: solid 3px $menuColor;
+        .name {
+          text-align: center;
+          padding-bottom: 0px;
+          .CH {
+            @include adjust-font-size-to(nth($font-list, 4), 2); //24px
+          }
+          .EN {
+            @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+            padding: 0;
+          }
         }
+        .info {
+          text-align: center;
+          p {
+            padding: 0;
+          }
+        }
+      }
+      .RoImg {
+        width: 100%;
+        order: 1;
+        img {
+          max-width: 40%;
+        }
+      }
     }
-    .skills {
+  }
+  .skills {
+    padding: 0;
+    .sklName {
+      @include span(24 of 24);
+      padding-top: 30px;
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+    .sklPic {
+      @include span(24 of 24);
+      padding-top: 30px;
+      h3 {
+        margin-bottom: 10px;
+      }
+      .picList {
+        li {
+          p {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .schedules {
+    padding: 30px 0 30px 0;
+    .school {
+      padding: 0 20px;
+      .chedules_school {
         padding: 0;
-        .sklName {
-            @include span(24 of 24);
-            padding-top: 30px;
-            h3 {
-                margin-bottom: 10px;
-            }
+        h3 {
+          left: 50%;
+          transform: translateX(-50%);
         }
-        .sklPic {
-            @include span(24 of 24);
-            padding-top: 30px;
-            h3 {
-                margin-bottom: 10px;
+        .justImg_PC {
+          display: none;
+        }
+        .justCard {
+          width: auto;
+          padding: 35px 20px 25px 20px;
+          margin: -11px 0 0!important;
+          z-index: 0;
+          float: none;
+          .justName {
+            text-align: center;
+          }
+          .justImg {
+            position: relative;
+            top: 0;
+            right: 0;
+            float: none;
+            bottom: 0;
+            left: auto;
+            width: auto;
+            margin: 20px -40px 0!important;
+            z-index: 0;
+            &:before {
+              content: '';
+              display: block;
+              background-color: $picbgColor;
+              padding-top: 75%; //384 / 512
             }
-            .picList {
+            img {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+          .justGood {
+            margin: 10px 0 0 0;
+            p {
+              text-align: center;
+            }
+          }
+          .justJob {
+            p {
+              text-align: center;
+            }
+            .jobJ {
+              width: 250px;
+              margin: 0 auto;
+              .jobList {
+                @include box-sizing(border-box);
+                padding-left: 14px;
                 li {
-                    p {
-                        display: inline-block;
-                    }
+                  position: relative;
+                  padding-left: 5px;
+                  &:before {
+                    content: '●';
+                    position: absolute;
+                    left: -16px;
+                    top: 3px;
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
-    .schedules {
-        padding: 30px 0 30px 0;
-        .school {
-            padding: 0 20px;
-            .chedules_school {
-                padding: 0;
-                h3 {
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-                .justImg_PC {
-                    display: none;
-                }
-                .justCard {
-                    width: auto;
-                    padding: 35px 20px 25px 20px;
-                    margin: -11px 0 0!important;
-                    z-index: 0;
-                    float: none;
-                    .justName {
-                        text-align: center;
-                    }
-                    .justImg {
-                        position: relative;
-                        top: 0;
-                        right: 0;
-                        float: none;
-                        bottom: 0;
-                        left: auto;
-                        width: auto;
-                        margin: 20px -40px 0!important;
-                        z-index: 0;
-                        &:before {
-                            content: '';
-                            display: block;
-                            background-color: $picbgColor;
-                            padding-top: 75%; //384 / 512
-                        }
-                        img {
-                            display: block;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    .justGood {
-                        margin: 10px 0 0 0;
-                        p {
-                            text-align: center;
-                        }
-                    }
-                    .justJob {
-                        p {
-                            text-align: center;
-                        }
-                        .jobJ {
-                            width: 250px;
-                            margin: 0 auto;
-                            .jobList {
-                                @include box-sizing(border-box);
-                                padding-left: 14px;
-                                li {
-                                    position: relative;
-                                    padding-left: 5px;
-                                    &:before {
-                                        content: '●';
-                                        position: absolute;
-                                        left: -16px;
-                                        top: 3px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    .experience {
+      margin-top: 50px;
+      padding: 0 20px;
+      .chedules_experience {
+        padding: 0;
+        h3 {
+          left: 50%;
+          transform: translateX(-50%);
         }
-        .experience {
-            margin-top: 50px;
-            padding: 0 20px;
-            .chedules_experience {
-                padding: 0;
-                h3 {
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-                .compalCard {
-                    width: auto;
-                    padding: 35px 20px 25px 20px;
-                    margin: -11px 0 0!important;
-                    z-index: 0;
-                    float: none;
-                    .compalName {
-                        padding: 0;
-                        text-align: center;
-                    }
-                    .compalImg {
-                        position: relative;
-                        top: 0;
-                        right: 0;
-                        float: none;
-                        bottom: 0;
-                        left: auto;
-                        width: auto;
-                        margin: 20px -40px 0!important;
-                        z-index: 0;
-                        &:before {
-                            content: '';
-                            display: block;
-                            background-color: $picbgColor;
-                            padding-top: 75%; //384 / 512
-                        }
-                        img {
-                            display: block;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    .jobC {
-                        margin-top: 20px;
-                        .jobList {
-                            width: 320px;
-                            margin: 0 auto;
-                            @include box-sizing(border-box);
-                            padding-left: 14px;
-                            li {
-                                position: relative;
-                                padding-left: 5px;
-                                &:before {
-                                    content: '●';
-                                    position: absolute;
-                                    left: -16px;
-                                    top: 3px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .compalImg_PC {
-                    display: none;
-                }
+        .compalCard {
+          width: auto;
+          padding: 35px 20px 25px 20px;
+          margin: -11px 0 0!important;
+          z-index: 0;
+          float: none;
+          .compalName {
+            padding: 0;
+            text-align: center;
+          }
+          .compalImg {
+            position: relative;
+            top: 0;
+            right: 0;
+            float: none;
+            bottom: 0;
+            left: auto;
+            width: auto;
+            margin: 20px -40px 0!important;
+            z-index: 0;
+            &:before {
+              content: '';
+              display: block;
+              background-color: $picbgColor;
+              padding-top: 75%; //384 / 512
             }
-        }
-        .F2EHappy {
-            margin-top: 50px;
-            padding: 0 20px;
-            .chedules_F2EHappy {
-                padding: 0;
-                h3 {
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-                .F2EImg_PC {
-                    display: none;
-                }
-                .F2ECard {
-                    width: auto;
-                    padding: 35px 20px 25px 20px;
-                    margin: -11px 0 0!important;
-                    z-index: 0;
-                    float: none;
-                    .F2EImg {
-                        position: relative;
-                        top: 0;
-                        right: 0;
-                        float: none;
-                        bottom: 0;
-                        left: auto;
-                        width: auto;
-                        margin: 0 -40px 0!important;
-                        z-index: 0;
-                        &:before {
-                            content: '';
-                            display: block;
-                            background-color: $picbgColor;
-                            padding-top: 62.5%; //320 / 512
-                        }
-                        img {
-                            display: block;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    p {
-                        margin-top: 20px;
-                    }
-                }
+            img {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
             }
+          }
+          .jobC {
+            margin-top: 20px;
+            .jobList {
+              width: 320px;
+              margin: 0 auto;
+              @include box-sizing(border-box);
+              padding-left: 14px;
+              li {
+                position: relative;
+                padding-left: 5px;
+                &:before {
+                  content: '●';
+                  position: absolute;
+                  left: -16px;
+                  top: 3px;
+                }
+              }
+            }
+          }
         }
+        .compalImg_PC {
+          display: none;
+        }
+      }
     }
+    .F2EHappy {
+      margin-top: 50px;
+      padding: 0 20px;
+      .chedules_F2EHappy {
+        padding: 0;
+        h3 {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .F2EImg_PC {
+          display: none;
+        }
+        .F2ECard {
+          width: auto;
+          padding: 35px 20px 25px 20px;
+          margin: -11px 0 0!important;
+          z-index: 0;
+          float: none;
+          .F2EImg {
+            position: relative;
+            top: 0;
+            right: 0;
+            float: none;
+            bottom: 0;
+            left: auto;
+            width: auto;
+            margin: 0 -40px 0!important;
+            z-index: 0;
+            &:before {
+              content: '';
+              display: block;
+              background-color: $picbgColor;
+              padding-top: 62.5%; //320 / 512
+            }
+            img {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+          p {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint(max-width 720px) {
-    .profile {
-        .profile_extend {
-            .RoImg {
-                img {
-                    max-width: 50%;
-                }
-            }
+  .profile {
+    .profile_extend {
+      .RoImg {
+        img {
+          max-width: 50%;
         }
+      }
     }
+  }
 }
 
 @include breakpoint(max-width 420px) {
-    .profile {
-        .profile_extend {
-            .RoImg {
-                img {
-                    max-width: 70%;
-                }
-            }
+  .profile {
+    .profile_extend {
+      .RoImg {
+        img {
+          max-width: 70%;
         }
+      }
     }
-    .skills {
-        .sklPic {
-            .picList {
-                li {
-                    p {
-                        display: block;
-                        span {
-                            display: block;
-                        }
-                    }
-                }
+  }
+  .skills {
+    .sklPic {
+      .picList {
+        li {
+          p {
+            display: block;
+            span {
+              display: block;
             }
+          }
         }
+      }
     }
-    .schedules {
-        .school {
-            .chedules_school {
-                h3 {
-                    @include adjust-font-size-to(nth($font-list, 5), 5); //28px
-                }
-                .justCard {
-                    .justName {
-                        h4 {
-                            display: block;
-                            span {
-                                display: block;
-                                @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                                &:after {
-                                    content: '-';
-                                    display: inline-block;
-                                    padding: 0 5px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+  }
+  .schedules {
+    .school {
+      .chedules_school {
+        h3 {
+          @include adjust-font-size-to(nth($font-list, 5), 5); //28px
         }
-        .experience {
-            .chedules_experience {
-                h3 {
-                    @include adjust-font-size-to(nth($font-list, 5), 5); //28px
+        .justCard {
+          .justName {
+            h4 {
+              display: block;
+              span {
+                display: block;
+                @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+                &:after {
+                  content: '-';
+                  display: inline-block;
+                  padding: 0 5px;
                 }
-                .compalCard {
-                    .compalName {
-                        h4 {
-                            display: block;
-                            span {
-                                display: block;
-                                @include adjust-font-size-to(nth($font-list, 3), 2); //16px
-                                &:after {
-                                    content: '-';
-                                    display: inline-block;
-                                    padding: 0 5px;
-                                }
-                            }
-                        }
-                    }
-                    .jobC {
-                        .jobList {
-                            width: 100%;
-                        }
-                    }
-                }
+              }
             }
+          }
         }
-        .F2EHappy {
-            .chedules_F2EHappy {
-                h3 {
-                    @include adjust-font-size-to(nth($font-list, 5), 5); //28px
-                    letter-spacing: 0;
-                }
-            }
-        }
+      }
     }
+    .experience {
+      .chedules_experience {
+        h3 {
+          @include adjust-font-size-to(nth($font-list, 5), 5); //28px
+        }
+        .compalCard {
+          .compalName {
+            h4 {
+              display: block;
+              span {
+                display: block;
+                @include adjust-font-size-to(nth($font-list, 3), 2); //16px
+                &:after {
+                  content: '-';
+                  display: inline-block;
+                  padding: 0 5px;
+                }
+              }
+            }
+          }
+          .jobC {
+            .jobList {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .F2EHappy {
+      .chedules_F2EHappy {
+        h3 {
+          @include adjust-font-size-to(nth($font-list, 5), 5); //28px
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
 }
