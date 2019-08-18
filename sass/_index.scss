@@ -90,7 +90,7 @@
 
     > .justCard {
       flex: 0 0 50%;
-      padding: 70px 50px;
+      padding: 50px;
       box-sizing: border-box;
       background-color: $menubgColor;
       position: relative;
@@ -103,11 +103,11 @@
           span {
             @include adjust-font-size-to(nth($font-list, 4), 3); //24px
             color: $menuColor;
-            &:before {
-              content: '-';
-              display: inline-block;
-              padding: 0 5px;
-            }
+            // &:before {
+            //   content: '-';
+            //   display: inline-block;
+            //   padding: 0 5px;
+            // }
           }
         }
         p {
@@ -116,7 +116,15 @@
         }
       }
 
+      p {
+        @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
+        &.txt-red {
+          color: red;
+        }
+      }
+
       .jobList {
+        margin-bottom: 20px;
         li {
           @include adjust-font-size-to(nth($font-list, 3), 2.5); //16px
           &:before {
@@ -125,6 +133,16 @@
             padding: 0 5px;
           }
         }
+      }
+
+      .link {
+        @include adjust-font-size-to(nth($font-list, 3), 2.5);
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: $menuColor;
+        color: $lightColor;
+        border-radius: 3px;
+        float: right;
       }
     }
   }
@@ -189,6 +207,10 @@
       > .justCard {
         flex: 0 0 100%;
         padding: 20px;
+        .link {
+          right: 20px;
+          bottom: 20px;
+        }
       }
     }
   }
