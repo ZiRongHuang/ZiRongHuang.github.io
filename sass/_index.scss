@@ -161,9 +161,11 @@
         .name {
           .CH {
             @include adjust-font-size-to(nth($font-list, 5), 3.5); //36px
+            text-align: center;
           }
           .EN {
             @include adjust-font-size-to(nth($font-list, 3), 3); //24px
+            text-align: center;
           }
         }
         .info {
